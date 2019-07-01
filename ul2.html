@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Ülesanne 2</title>
+    </head>
+    <body>
+        <ul id="numbers">
+        </ul>
+    </body>
+    <script>
+        var numbersList = document.getElementById("numbers");
+        for(i = 1; i <= 100; i++) {
+            var li = document.createElement("LI");
+            var text = document.createTextNode(i);
+            if (i % 3 == 0 && i % 5 == 0) {
+                text = document.createTextNode("foobar");
+            } else if (i % 3 == 0) {
+                text = document.createTextNode("foo");
+            } else if (i % 5 == 0) {
+                text = document.createTextNode("bar");
+            }
+            li.appendChild(text); 
+            numbersList.appendChild(li);
+        }
+    </script>
+</html>
